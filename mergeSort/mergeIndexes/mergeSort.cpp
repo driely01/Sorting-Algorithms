@@ -6,7 +6,7 @@
 /*   By: del-yaag <del-yaag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 13:00:31 by del-yaag          #+#    #+#             */
-/*   Updated: 2023/12/19 13:23:22 by del-yaag         ###   ########.fr       */
+/*   Updated: 2023/12/19 20:40:23 by del-yaag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,6 @@ void mergeSort( std::vector<int> &array ) {
 	merge( left, right, array );
 }
 
-// print array
 void printArray( std::vector<int> &array ) {
 
 	std::vector<int>::iterator it = array.begin();
