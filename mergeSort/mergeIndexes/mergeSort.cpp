@@ -6,12 +6,21 @@
 /*   By: del-yaag <del-yaag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 13:00:31 by del-yaag          #+#    #+#             */
-/*   Updated: 2023/12/19 20:40:23 by del-yaag         ###   ########.fr       */
+/*   Updated: 2023/12/20 13:14:05 by del-yaag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mergeSort.hpp"
 
+void printArray( std::vector<int> &array ) {
+
+	std::vector<int>::iterator it = array.begin();
+	for ( ; it != array.end(); ++it ) {
+
+		std::cout << *it << " ";
+	}
+	std::cout << std::endl;
+}
 
 static void merge( std::vector<int> left, std::vector<int> right, std::vector<int> &array ) {
 
@@ -54,14 +63,4 @@ void mergeSort( std::vector<int> &array ) {
 	mergeSort( left );
 	mergeSort( right );
 	merge( left, right, array );
-}
-
-void printArray( std::vector<int> &array ) {
-
-	std::vector<int>::iterator it = array.begin();
-	for ( ; it != array.end(); ++it ) {
-
-		std::cout << *it << " ";
-	}
-	std::cout << std::endl;
 }
